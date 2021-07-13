@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label for="god">good</label>
+<input type="checkbox" id="god" onclick="check('god')">
+
+<label for="fast" >fast</label>
+<input type="checkbox" id="fast" onclick="check('fast')">
+
+<label for="chear" >chear</label>
+<input type="checkbox" id="chear" onclick="check('chear')">
+<script>
+    function check(value) {
+        let good = document.getElementById('god').value;
+        let fast = document.getElementById('fast').value;
+        let chear = document.getElementById('chear').value;
+        if (value == 'god') {
+            if (fast.checked && cheap.checked) {
+                cheap.checked = false;
+            }
+        } else if (value == 'cheap') {
+            if (good.checked && fast.checked) {
+                fast.checked = false;
+            }
+        } else {
+            if(good.checked && cheap.checked){
+                good.checked = false;
+            }
+        }
+    }
+
+</script>
+</body>
+</html>

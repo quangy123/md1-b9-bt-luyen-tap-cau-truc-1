@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" placeholder="nhập điểm kiểm tra ?" id="ktra">
+<input type="text" placeholder="nhập điểm thi giữa kỳ ?" id="giuky">
+<input type="text" placeholder="điểm cuối kì ?" id="cuoiky">
+<button onclick="tongdiem()">=</button>
+<script>
+function tongdiem(){
+    let a = +document.getElementById('ktra').value;
+    let b = +document.getElementById('giuky').value;
+    let c = +document.getElementById('cuoiky').value;
+    let d = (a+b+c)/3 ;
+    if (10 == d || d >9){
+        alert('điểm của bạn :'+d+' Học lực loại : XUẤT SẮC <3');
+    }else
+        if (d>8){
+            alert('điểm của bạn : '+d+' Học lực loại : TỐt ');
+        }else
+            if(d>6.5){
+                alert('điểm của bạn : '+d+' Học lực loại : Khá');
+            }else if(d>=5){
+                alert('điểm của bạn : '+d+' Học lực loại : Trung bình');
+            }else
+            alert('điểm của bạn : '+d+' Học lực loại : yếu ')
+};
+</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Sản phẩm<br><input type="text" id="sanpham"> <br>
+Giá bán<br><input type="text" id="giaban">
+<button onclick="hoahong()">=</button>
+<script>
+    function hoahong(){
+        let a = +document.getElementById('sanpham').value;
+        let b = document.getElementById('giaban').value;
+        let c = a*b
+        if(c>=200000000){
+            alert('bạn nhận được : 15% hoa hồng');
+        }else
+            if (c>=100000000){
+                alert('bạn nhận được : 10% hoa hồng');
+            }else
+                if (c>=50000000){
+                    alert('bạn nhận được : 5% hoa hồng');
+                }else {
+                    alert('bạn cần bán được => 50.000.000 vnd ! mới được nhận hoa hồng !')
+                }
+    }
+</script>
+</body>
+</html>
